@@ -19,7 +19,7 @@ deepstate_create_makefile <-function(package,fun_name){
   makefile.cpp_path<-file.path(fun_path,makefile.name.cpp)
   test_harness_path <- file.path(fun_path,test_harness)
   file.create(makefile_path, recursive=TRUE)
-  path <-paste("R_HOME=",dirname(R.home('include')))
+  path <-paste("R_HOME=",R.home())
   write_to_file<-paste0(write_to_file,path,"\n")
   insts.path <- "${HOME}"
   deepstate.path <- file.path(insts.path,".RcppDeepState")
